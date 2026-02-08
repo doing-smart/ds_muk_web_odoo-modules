@@ -53,10 +53,49 @@
 			    transition: box-shadow ease-in 0.1s, transform ease-in 0.1s;
 			    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.02);
 			}
-			.mk_app_name {
-				color: $mk-appsmenu-color; 
-			}
-	   	}
+            .mk_app_name {
+                /* Text */
+                color: #ffffff; // force white for max readability
+                font-weight: 700;
+                font-size: 13px;
+                letter-spacing: 0.2px;
+
+                /* Layout */
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 30px;
+                min-width: 160px;
+                padding: 0 14px;
+
+                white-space: nowrap;
+
+                /* Shape */
+                border-radius: 999px;
+
+                /* Dark glass background */
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.45)
+                );
+
+                /* Border for separation */
+                border: 1px solid rgba(255, 255, 255, 0.18);
+
+                /* Depth */
+                box-shadow:
+                    0 2px 6px rgba(0, 0, 0, 0.65),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+                /* Text clarity */
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+
+                transition: all 0.25s ease;
+            }
+        }
+
 	    &:hover {
 			.mk_app_icon {
 			    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.03);

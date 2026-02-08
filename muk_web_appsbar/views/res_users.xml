@@ -13,4 +13,17 @@
         </field>
     </record>
 
+        <!-- TODO:Alaa code // add also inside normal form view we need add new addon to inherit and add scalable code even if we pulled new code from origin-->
+    <record id="view_users_form_form_inherit_add_chatter" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.chatter.position</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+<!--            <xpath expr="//field[@name='tz' and @widget='timezone_mismatch']" position="after">-->
+            <xpath expr="//field[@name='tz']" position="after">
+                <field name="sidebar_type"/>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
